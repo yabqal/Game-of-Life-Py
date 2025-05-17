@@ -10,13 +10,13 @@ pg.init()
 screen = pg.display.set_mode((WIDTH, HEIGHT))
 clock = pg.time.Clock()
 
-grid = np.random.choice([0, 0], size=(ROW, COLUMN))
+grid = np.random.choice([0, 1], size=(ROW, COLUMN))
 
-grid[5, 5] = 1
+'''grid[5, 5] = 1
 grid[6, 5] = 1
 grid[7, 5] = 1
 grid[7, 4] = 1
-grid[6, 3] = 1
+grid[6, 3] = 1'''
 
 
 class Button:
@@ -28,7 +28,7 @@ class Button:
         self.is_hovered = False
 
         # Font setup
-        self.font = pg.font.SysFont(None, 18)
+        self.font = pg.font.SysFont(None, 24)
         self.text_surf = self.font.render(text, True, "#ffffff")
         self.text_rect = self.text_surf.get_rect(center=self.rect.center)
 
